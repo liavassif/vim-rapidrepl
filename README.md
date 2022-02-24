@@ -19,9 +19,9 @@ Well basically if Spyder/VSCode works well for you by all means use them. I've n
 * LSP integration (using Vim-LSP plugin and PYLSP): show/goto symbol (Space-p), goto definition (gd in normal mode), show references (gr)  
 * Using popup menus for usefull commands (using LeaderF plugin): show buffers (C-p), open file (C-l), open last edited files (Space-l), show LeaderF commands (C-x). Use Ctrl-j/k to cycle up and down in the list.  
 * Copy-paste to/from system clipboard works in Editor, REPL and also normal mode.  
-* Debug using (Space-d) which inserts debug statements. Then run the code as usual (F5 or run cell) to drop into ipdb. Alternatively as always you can use IPython %debug when an error occurs. For more advanced usage there is the vim Spector plugin.  
-* Toggle comments using C-/ (normal mode)  
-* Switching between the REPL and editor (Alt-1 or C-W,C-W). Also easily 'inspect' a variable even in ipdb by sending the variable to ipython using the keyboard  
+* Debug using (Space-d) which inserts debug statements. Then run the code as usual (F5 or run cell) to drop into ipdb. Alternatively as always you can use IPython %debug when an error occurs. Statement/variable execution (evaluation) also work when in ipdb (Space-1/2/3). For more advanced usage there is the vim Spector plugin.  
+* Toggle comments using C-/ (normal mode). 
+* Switching between the REPL and editor (Alt-1 or C-W,C-W).  
 * Using IPython already have many builtin features, sometimes missing from IDEs: symbol completion in the REPL, REPL search history, kernel interrupting (Ctrl-c), text is auto scrolled at the bottom when output is appended (long for loops)  
 * You can access the REPL output and copy it by using the keyboard (Escape and then the usual editing commands)  
 
@@ -33,12 +33,12 @@ Next,
 `mkdir -p ~/.vim/autoload ~/.vim/tmp`  
 Install [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager (Download plug.vim and put it in "~/.vim/autoload" directory)
 Copy vimrc to ~/.vim
-Run vim (without gui) and type: 
+Run `vim` (without gui) and type: 
 `:PlugInstall (press enter)`
 wait for the plugins to install  
-Exit (:qa!) and run gvim (or vim -g).
+Exit (`:qa!`) and run `gvim` (or `vim -g`).
 
-If you see some errors regarding LeaderF, try using vim-clap instead: change elseif 0 to 1 before "for clap, remove the comment before vim-clap plugin and comment out the LeaderF plugin. Run :PlugInstall and :PlugClean and restart.
+If you see some errors regarding LeaderF, try using vim-clap instead: change elseif 0 to 1 before "for clap, remove the comment before vim-clap plugin and comment out the LeaderF plugin. Run `:PlugInstall` and `:PlugClean` and restart.
 
 Edit some of the plugins in order to make the editing more fluent. See comments in vimrc.
 
@@ -56,7 +56,7 @@ Nicer fonts and more shortcuts are available.  copy-paste might not work in Vim.
 Can I use it in Vim instead of GVim?  
 Yes, but some shortcuts most likely doesn't work so you'll have to edit them and change to different keys. Sometimes C+key needs to be replaced by M+key (Alt+key), but sometimes it is the other way around. 
 
-## What's missing:
+## What's missing
 I'm not using any Git plugins so feel free to add them if you need.  
 Source code execution source integration (when an error occurs clicking on the stacktrace should jump to the code)  
 Refactoring can be provided by more plugins  
