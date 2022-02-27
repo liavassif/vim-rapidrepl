@@ -31,8 +31,8 @@ Install [python-lsp-server](https://github.com/python-lsp/python-lsp-server):
 `pip install python-lsp-server`  
 Next,  
 `mkdir -p ~/.vim/autoload ~/.vim/tmp`  
-Install [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager (Download plug.vim and put it in "~/.vim/autoload" directory)
-Copy vimrc to ~/.vim
+Install [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager (Download plug.vim and put it in "~/.vim/autoload" directory)  
+Copy vimrc to ~/.vim  
 Run `vim` (without gui) and type: 
 `:PlugInstall (press enter)`
 wait for the plugins to install  
